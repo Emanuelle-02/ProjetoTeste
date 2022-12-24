@@ -11,6 +11,10 @@ class TestSetup(TestCase):
         user.save()
         return user
 
+    def login(self):
+        user_logged = self.client.login(username='teste101', password='123456')
+        return user_logged
+        
     def tearDown(self) -> None:
         print('\nTeste finalizado')
         return super().tearDown()

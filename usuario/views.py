@@ -39,8 +39,7 @@ def cadastro(request):
             context['has_error'] = True
             return render(request, 'auth/cadastro.html', context, status=409)
 
-        if context['has_error']:
-            return render(request, 'auth/cadastro.html', context)
+        
 
         user=User.objects.create_user(username=username, email=email)
         user.set_password(password)
