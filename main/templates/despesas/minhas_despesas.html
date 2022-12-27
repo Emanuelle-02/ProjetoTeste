@@ -41,7 +41,6 @@
                         <td>{{despesa.valor}}</td>
                         <td>{{despesa.data}}</td>
                         <td>
-                            <a href="{% url 'editar_despesa' despesa.id %}" class="btn btn-secondary btn-sm">Editar</a>
                             <a href="{% url 'delete_despesa' despesa.id %}" class="btn btn-danger btn-sm">Deletar</a>
                         </td>
                     </tr>

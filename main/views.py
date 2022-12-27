@@ -80,33 +80,6 @@ class CreateDespesaView(CreateView):
         obj.save()# pragma: no cover 
         return HttpResponseRedirect("minhas_despesas")# pragma: no cover 
 
-@login_required(login_url='/auth/login')
-def edit_despesa(request, id):
-    despesa=Despesas.objects.get(pk=id)
-    categorias = Categoria.objects.filter(user=request.user)
-    context={
-        'despesa': despesa,
-        'val': despesa,
-        'categorias': categorias,
-    }
-    if request.method=='GET':
-        return render(request, 'despesas/editar_despesa.html', context)
-    if request.method=='POST':
-        descricao = request.POST['descricao']
-        categoria = request.POST['categoria']
-        valor = request.POST['valor']
-        data = request.POST['data']
-
-        despesa.user=request.user 
-        despesa.descricao=descricao 
-        despesa.categoria=Categoria.objects.get(nome=categoria)
-        despesa.valor=valor 
-        despesa.data=data
-        despesa.save()
-        messages.success(request, 'Despesa atualizada com sucesso!')
-
-        return redirect('minhas_despesas')
-
 @login_required(login_url='/auth/login')   
 def remove_despesa(request, id):
     despesa = Despesas.objects.get(pk=id)

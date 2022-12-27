@@ -5,7 +5,6 @@ urlpatterns = [
     path('',views.index, name='index'),
     path('minhas_despesas', views.minhas_despesas, name="minhas_despesas"),
     path('add_despesa', views.CreateDespesaView.as_view(), name="add_despesa"),
-    path('editar_despesa/<int:id>', views.edit_despesa, name="editar_despesa"),
     path('delete_despesa/<int:id>', views.remove_despesa, name="delete_despesa"),
     path('listagem_categorias', views.listar_categoria, name="listagem_categorias"),
     path('add_categoria', views.add_categoria, name="add_categoria"),
