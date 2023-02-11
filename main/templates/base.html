@@ -27,30 +27,20 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Dashboard</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" style="color: white;" href="#" data-bs-toggle="dropdown" aria-expanded="false">Renda</a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item">
-                                    <a class="dropdown-item" href="{% url 'listagem_renda' %}">Minha Renda</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="{% url 'estatistica_renda' %}">Estatísticas de renda</a>
-                                </li>
-                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link active" id="listagem_renda" href="{% url 'listagem_renda' %}" style="color: white;">Minha Renda</a>
                         </li>
-                        <li class="nav-item dropdown"">
-                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">Despesas</a>
-                            <ul class="dropdown-menu" >
-                                <li>
-                                    <a class="dropdown-item" href="{% url 'minhas_despesas' %}">Minhas Despesas</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="{% url 'listagem_categorias' %}">Categorias</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="{% url 'estatistica' %}">Estatísticas de despesas</a>
-                                </li>
-                            </ul>
+                        <li>
+                            <a class="nav-link active" id="estatistica_renda" href="{% url 'estatistica_renda' %}" style="color: white;">Estatísticas de renda</a>
+                        </li>
+                        <li>
+                            <a class="nav-link active" id="minhas_despesas" href="{% url 'minhas_despesas' %}">Minhas Despesas</a>
+                        </li>
+                        <li>
+                            <a class="nav-link active" id="listagem_categorias" href="{% url 'listagem_categorias' %}">Categorias</a>
+                        </li>
+                        <li>
+                            <a class="nav-link active" id="estatistica" href="{% url 'estatistica' %}">Estatísticas de despesas</a>
                         </li>
                     </ul>
                     <form class="d-flex" action="{% url 'logout' %}" method="POST">
@@ -71,9 +61,9 @@
         </div>
     </div>
 
-    <script src="/docs/5.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!--script src="/docs/5.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script-->
     <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
-    <script src="/docs/5.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!-- script src="/docs/5.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script -->
     <script src="{% static 'js/offcanvas.js' %}"></script>
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
     </body>
