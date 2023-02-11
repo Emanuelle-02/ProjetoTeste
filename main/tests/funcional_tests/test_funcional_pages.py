@@ -1,7 +1,6 @@
 import os
 import time
 from time import sleep
-
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 from django.test import LiveServerTestCase, TestCase
 from selenium import webdriver
@@ -21,6 +20,7 @@ class FunctionalTest(TestCase, LiveServerTestCase):
       sleep(2)
       browser.quit()
 
+      
    def test_user_login_page(self):
       browser = webdriver.Chrome()
       browser.get("http://127.0.0.1:8000/auth/login?next=/")
@@ -36,6 +36,7 @@ class FunctionalTest(TestCase, LiveServerTestCase):
         
       browser.quit()
 
+      
    def test_user_register_page(self):
       browser = webdriver.Chrome()
       browser.get("http://127.0.0.1:8000/auth/cadastro")
@@ -56,6 +57,7 @@ class FunctionalTest(TestCase, LiveServerTestCase):
         
       browser.quit()
 
+      
    def test_nao_registrar_usuario_ja_cadastrado(self):
       browser = webdriver.Chrome()
       browser.get("http://127.0.0.1:8000/auth/cadastro")
@@ -94,6 +96,7 @@ class FunctionalTest(TestCase, LiveServerTestCase):
         
       browser.quit()
 
+      
    def test_list_estatistica_despesas(self):
       browser = webdriver.Chrome()
       browser.get("http://127.0.0.1:8000/auth/login?next=/")
@@ -111,6 +114,7 @@ class FunctionalTest(TestCase, LiveServerTestCase):
         
       browser.quit()
 
+      
    def test_listagem_renda(self):
       browser = webdriver.Chrome()
       browser.get("http://127.0.0.1:8000/auth/login?next=/")
